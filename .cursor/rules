@@ -236,4 +236,23 @@
 - Monitor deployment
 - Verify docs
 - Check performance
-- Monitor errors 
+- Monitor errors
+
+## Cursor Rules
+
+### Context and Memory
+- Maintain context and memory throughout the conversation.
+- Enforce numbering of suggested options (e.g., 1, 2, 3, ...).
+- Always include a final option with the text 'recommend'.
+
+### Example
+When presenting options, format as follows:
+1. Option 1
+2. Option 2
+3. Option 3
+4. recommend
+
+### Additional Guidelines
+- Keep responses clear and concise.
+- Follow the TTDD and FRAOP methodologies strictly.
+- Ensure all documentation and code changes are properly committed. 
