@@ -1,42 +1,21 @@
 {
-  "name": "spinbitz-rebuild",
+  "name": "spinbitz-site-rebuild",
   "version": "1.0.0",
-  "description": "SpinbitZ website rebuild using FRAOP architecture and TTDD methodology",
-  "main": "src/index.js",
+  "description": "SpinbitZ website rebuild with modern SSG and CMS",
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
-    "lint": "eslint src/**/*.{js,jsx}",
-    "lint:fix": "eslint src/**/*.{js,jsx} --fix",
-    "format": "prettier --write \"src/**/*.{js,jsx,json,md}\"",
-    "build": "webpack --mode production",
-    "dev": "webpack serve --mode development"
+    "test": "vitest",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "process-issue-status": "ts-node src/scripts/process-issue-status.ts",
+    "process-project-card": "ts-node src/scripts/process-project-card.ts"
   },
-  "keywords": [
-    "FRAOP",
-    "MVI",
-    "TTDD",
-    "React",
-    "Cycle.js"
-  ],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^19.0.7"
+  },
   "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/preset-react": "^7.23.3",
-    "@cycle/react": "^1.0.0",
-    "@cycle/state": "^1.0.0",
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.2.1",
-    "babel-loader": "^9.1.3",
-    "callbag-basics": "^3.2.0",
-    "callbag-jsx": "^0.1.0",
-    "eslint": "^8.57.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "prettier": "^3.2.5",
-    "webpack": "^5.90.3",
-    "webpack-cli": "^5.1.4"
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.0",
+    "vitest": "^0.34.0"
   }
 }
