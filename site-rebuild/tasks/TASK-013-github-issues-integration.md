@@ -1,8 +1,8 @@
 # TASK-013: Integrate GitHub Issues with TTDD System
 
 ## Status
-- [x] Not Started
-- [ ] In Progress
+- [ ] Not Started
+- [x] In Progress
 - [ ] In Review
 - [ ] Completed
 
