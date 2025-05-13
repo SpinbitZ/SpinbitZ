@@ -1,0 +1,239 @@
+# SpinbitZ Development Rules
+
+## Core Paradigms
+
+### FRAOP (Functional-Reactive Aspect-Oriented Programming)
+- All components MUST follow the FRAOP architecture
+- Use callbags for stream management
+- Implement proper stream cleanup
+- Follow unidirectional data flow
+- Maintain pure functions
+- Use proper stream operators
+
+### MVI (Model-View-Intent)
+- All components MUST implement MVI pattern
+- Separate intent, model, and view logic
+- Use proper stream transformations
+- Maintain clear data flow
+- Implement proper state management
+- Follow fractal state patterns
+
+### TTDD (Test and Task Driven Development)
+- Write tests BEFORE implementation
+- Follow task template structure
+- Maintain test coverage > 90%
+- Document all changes
+- Follow review checklist
+- Use proper commit messages
+
+## Code Structure
+
+### Component Rules
+- Use functional components
+- Implement proper TypeScript types
+- Follow atomic design principles
+- Use proper stream composition
+- Implement proper error handling
+- Follow accessibility guidelines
+
+### State Management
+- Use fractal state patterns
+- Implement proper state isolation
+- Use proper stream operators
+- Follow unidirectional data flow
+- Implement proper state updates
+- Use proper state selection
+
+### Stream Management
+- Use callbags for streams
+- Implement proper stream cleanup
+- Use proper stream operators
+- Handle stream errors
+- Implement proper backpressure
+- Use proper stream composition
+
+## Development Process
+
+### Task Management
+- Follow task template
+- Write tests first
+- Document changes
+- Follow review checklist
+- Use proper commit messages
+- Maintain task status
+
+### Code Review
+- Check FRAOP compliance
+- Verify MVI implementation
+- Check test coverage
+- Verify documentation
+- Check performance
+- Verify accessibility
+
+### Documentation
+- Document components
+- Document streams
+- Document state
+- Document tests
+- Document changes
+- Maintain README
+
+## Testing Requirements
+
+### Unit Tests
+- Test components
+- Test streams
+- Test state
+- Test utilities
+- Test helpers
+- Test hooks
+
+### Integration Tests
+- Test component interaction
+- Test stream interaction
+- Test state interaction
+- Test error handling
+- Test performance
+- Test accessibility
+
+### Stream Tests
+- Test stream operators
+- Test stream composition
+- Test stream cleanup
+- Test error handling
+- Test backpressure
+- Test performance
+
+## Performance Requirements
+
+### Component Performance
+- Use proper memoization
+- Implement proper updates
+- Optimize renders
+- Handle backpressure
+- Optimize streams
+- Monitor performance
+
+### Stream Performance
+- Optimize stream operators
+- Handle backpressure
+- Clean up streams
+- Monitor performance
+- Optimize composition
+- Handle errors
+
+### Build Performance
+- Optimize bundle size
+- Implement code splitting
+- Optimize assets
+- Monitor build time
+- Optimize deployment
+- Monitor performance
+
+## Security Requirements
+
+### Code Security
+- Validate input
+- Sanitize output
+- Handle errors
+- Implement CSP
+- Follow security guidelines
+- Monitor security
+
+### Data Security
+- Validate data
+- Sanitize data
+- Handle errors
+- Implement proper access
+- Follow security guidelines
+- Monitor security
+
+## Accessibility Requirements
+
+### Component Accessibility
+- Use proper ARIA
+- Follow WCAG 2.1
+- Implement keyboard nav
+- Handle focus
+- Test accessibility
+- Monitor accessibility
+
+### Content Accessibility
+- Use proper markup
+- Follow WCAG 2.1
+- Implement proper structure
+- Handle focus
+- Test accessibility
+- Monitor accessibility
+
+## Documentation Requirements
+
+### Code Documentation
+- Document components
+- Document streams
+- Document state
+- Document tests
+- Document changes
+- Maintain README
+
+### API Documentation
+- Document API
+- Document types
+- Document usage
+- Document examples
+- Document changes
+- Maintain docs
+
+## Review Process
+
+### Code Review
+- Check FRAOP
+- Check MVI
+- Check tests
+- Check docs
+- Check performance
+- Check security
+
+### Documentation Review
+- Check completeness
+- Check accuracy
+- Check examples
+- Check changes
+- Check structure
+- Check formatting
+
+## Commit Rules
+
+### Commit Messages
+- Follow template
+- Be descriptive
+- Reference tasks
+- Document changes
+- Follow format
+- Be concise
+
+### Branch Rules
+- Follow naming
+- Create from main
+- Update main
+- Handle conflicts
+- Follow process
+- Maintain history
+
+## Deployment Rules
+
+### Build Process
+- Run tests
+- Check coverage
+- Optimize build
+- Check security
+- Verify docs
+- Monitor performance
+
+### Deployment Process
+- Verify build
+- Check security
+- Monitor deployment
+- Verify docs
+- Check performance
+- Monitor errors 
