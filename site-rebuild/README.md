@@ -19,6 +19,40 @@ site-rebuild/
 - **MVI**: Model-View-Intent pattern
 - **Callbags**: Stream management
 
+## Rules System
+The project follows a strict set of development rules defined in `.cursor/rules`. These rules enforce:
+
+### Core Paradigms
+- FRAOP architecture compliance
+- MVI pattern implementation
+- TTDD methodology
+- Stream management with callbags
+
+### Development Standards
+- Code structure and organization
+- State management patterns
+- Stream handling and cleanup
+- Testing requirements
+- Performance optimization
+- Security practices
+- Accessibility standards
+
+### Process Requirements
+- Task management workflow
+- Code review process
+- Documentation standards
+- Commit message format
+- Branch management
+- Deployment procedures
+
+### Cursor Integration
+- Context and memory maintenance
+- Option presentation format
+- Rule enforcement
+- Documentation requirements
+
+All team members must follow these rules to maintain consistency and quality across the project. The rules are enforced through the Cursor IDE integration.
+
 ## Getting Started
 
 ### Prerequisites
