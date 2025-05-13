@@ -51,6 +51,64 @@ The project follows a strict set of development rules defined in `.cursor/rules`
 - Rule enforcement
 - Documentation requirements
 
+### Rule Enforcement Examples
+
+#### Option Presentation
+```typescript
+// ❌ Incorrect format
+- Add new feature
+- Fix bug
+- Update docs
+
+// ✅ Correct format
+1. Implement new authentication feature
+2. Fix user session persistence bug
+3. Update API documentation
+recommend: Implement new authentication feature as it's a blocker for other features
+```
+
+#### Task Management
+```typescript
+// ❌ Incorrect task format
+- Add login page
+- Write tests later
+
+// ✅ Correct task format
+1. Create login page component with FRAOP architecture
+2. Implement MVI pattern for authentication
+3. Write unit tests for login functionality
+4. Add integration tests for auth flow
+recommend: Start with login page component as it's the foundation for authentication
+```
+
+#### Code Review
+```typescript
+// ❌ Incorrect review format
+- Looks good
+- Add more tests
+
+// ✅ Correct review format
+1. Add error handling for network failures
+2. Increase test coverage for edge cases
+3. Update documentation with new API changes
+4. Add performance benchmarks
+recommend: Add error handling first as it's critical for production reliability
+```
+
+#### Documentation Updates
+```typescript
+// ❌ Incorrect documentation
+- Updated API
+- Fixed bugs
+
+// ✅ Correct documentation
+1. Added new authentication endpoints
+2. Documented error handling procedures
+3. Updated API versioning strategy
+4. Added migration guide
+recommend: Update API documentation first to ensure proper integration
+```
+
 All team members must follow these rules to maintain consistency and quality across the project. The rules are enforced through the Cursor IDE integration.
 
 ## Getting Started
