@@ -241,18 +241,25 @@
 ## Cursor Rules
 
 ### Context and Memory
-- Maintain context and memory throughout the conversation.
-- Enforce numbering of suggested options (e.g., 1, 2, 3, ...).
-- Always include a final option with the text 'recommend'.
+- Maintain context and memory throughout the conversation
+- Enforce numbering of suggested options (e.g., 1, 2, 3, ...)
+- Always include a final option with the text 'recommend'
+- Present options in a clear, structured format
+- Ensure options are actionable and specific
+- Include context for each option
 
-### Example
+### Example Format
 When presenting options, format as follows:
-1. Option 1
-2. Option 2
-3. Option 3
-4. recommend
+1. [Specific Action]
+2. [Specific Action]
+3. [Specific Action]
+4. [Specific Action]
+recommend: [Recommended Action with Explanation]
 
-### Additional Guidelines
-- Keep responses clear and concise.
-- Follow the TTDD and FRAOP methodologies strictly.
-- Ensure all documentation and code changes are properly committed. 
+### Enforcement
+- All option lists MUST follow the numbered format
+- All option lists MUST include a 'recommend' option
+- All options MUST be actionable and specific
+- All options MUST be properly numbered
+- All options MUST be properly formatted
+- All options MUST include necessary context 

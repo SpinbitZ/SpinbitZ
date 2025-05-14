@@ -9,9 +9,7 @@
     "process-issue-status": "ts-node src/scripts/process-issue-status.ts",
     "process-project-card": "ts-node src/scripts/process-project-card.ts"
   },
-  "dependencies": {
-    "@octokit/rest": "^19.0.7"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^20.0.0",
     "ts-node": "^10.9.1",
