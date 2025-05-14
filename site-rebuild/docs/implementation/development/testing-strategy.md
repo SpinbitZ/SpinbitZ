@@ -33,65 +33,70 @@ graph TD
 ## Testing Framework
 
 ### 1. Vitest Configuration
-```typescript
+```js
+// vitest.config.js
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
-    environment: 'node',
-    include: ['**/*.{test,spec}.{js,ts}'],
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: ['./src/__tests__/setup.ts'],
     coverage: {
-      provider: 'v8',
       reporter: ['text', 'json', 'html'],
-      lines: 90,
-      functions: 90,
-      branches: 90,
-      statements: 90
-    }
-  }
+      exclude: ['node_modules/', 'src/__tests__/'],
+    },
+  },
 });
 ```
 
 ### 2. Testing Utilities
-```typescript
+
+- **Vitest**: The primary testing framework.
+- **React Testing Library**: For testing React components.
+- **xstream**: For testing reactive streams in Cycle.js.
+
+### Example: Testing a Cycle.js Component
+
+```js
 import { describe, it, expect } from 'vitest';
-import { render, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import { App } from '../../fraop';
 
-// Test utilities for components
-export const renderWithProviders = (
-  ui: React.ReactElement,
-  {
-    initialState = {},
-    store = configureStore({
-      reducer: rootReducer,
-      preloadedState: initialState
-    })
-  } = {}
-) => {
-  return {
-    ...render(
-      <Provider store={store}>
-        {ui}
-      </Provider>
-    ),
-    store
-  };
-};
+describe('FRAOP App', () => {
+  it('renders without crashing', () => {
+    render(<App />);
+  });
 
-// Test utilities for streams
-export const createTestStream = <T>(initialValue: T) => {
-  const stream = new Subject<T>();
-  stream.next(initialValue);
-  return stream;
-};
+  it('displays the correct heading', () => {
+    render(<App />);
+    expect(screen.getByText('FRAOP Cycle.js App Shell - Count: 0')).toBeInTheDocument();
+  });
 
-// Test utilities for state
-export const createTestState = <T>(initialState: T) => {
-  return {
-    ...initialState,
-    dispatch: vi.fn()
-  };
-};
+  it('increments the counter on button click', () => {
+    render(<App />);
+    const button = screen.getByText('Increment');
+    button.click();
+    expect(screen.getByText('FRAOP Cycle.js App Shell - Count: 1')).toBeInTheDocument();
+  });
+
+  it('decrements the counter on button click', () => {
+    render(<App />);
+    const button = screen.getByText('Decrement');
+    button.click();
+    expect(screen.getByText('FRAOP Cycle.js App Shell - Count: -1')).toBeInTheDocument();
+  });
+
+  it('resets the counter on button click', () => {
+    render(<App />);
+    const inc = screen.getByText('Increment');
+    inc.click();
+    inc.click();
+    const reset = screen.getByText('Reset');
+    reset.click();
+    expect(screen.getByText('FRAOP Cycle.js App Shell - Count: 0')).toBeInTheDocument();
+  });
+});
 ```
 
 ## Testing Guidelines

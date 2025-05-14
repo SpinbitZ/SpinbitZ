@@ -270,4 +270,31 @@ dispatch({
 - [TTDD System](./ttdd-system.md)
 - [Task Management](./task-management.md)
 - [Testing Strategy](./testing-strategy.md)
-- [Implementation Plan](../../implementation-plan.md) 
+- [Implementation Plan](../../implementation-plan.md)
+
+## Git Workflow
+- All Git operations (commits, pushes, etc.) must be performed in the parent directory (`SpinbitZ`), not in `site-rebuild`.
+- Ensure you are in the correct directory before running Git commands. 
+
+## FRAOP Architecture and App Skeleton
+
+### Folder Structure
+- `src/components/`: Reusable UI components
+- `src/streams/`: Stream management using Callbags
+- `src/state/`: State management using FRAOP
+- `src/fraop/`: Core FRAOP architecture files
+  - `index.ts`: Entry point for FRAOP initialization
+  - `aspects.ts`: Aspect definitions for FRAOP
+- `src/pages/`: Page components (e.g., Home, NotFound)
+- `src/index.tsx`: Main app entry point
+
+### Key Files
+- `src/index.tsx`: Renders the App component and handles routing
+- `src/pages/Home.tsx`: Home page component
+- `src/pages/NotFound.tsx`: 404 Not Found page component
+- `src/fraop/index.ts`: FRAOP initialization
+- `src/fraop/aspects.ts`: FRAOP aspect definitions
+
+### Testing
+- Tests are located in `src/__tests__/`
+- Use Vitest and React Testing Library for component and routing tests 
