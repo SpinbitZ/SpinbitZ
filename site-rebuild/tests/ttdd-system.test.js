@@ -1,5 +1,6 @@
-const fs = require('fs');
-const path = require('path');
+import { describe, it, expect } from 'vitest';
+import fs from 'fs';
+import path from 'path';
 
 describe('TTDD System Setup', () => {
   describe('Project Structure', () => {
@@ -20,8 +21,8 @@ describe('TTDD System Setup', () => {
   });
 
   describe('Testing Setup', () => {
-    it('should have Jest configuration', () => {
-      expect(fs.existsSync(path.join(__dirname, '..', 'jest.config.js'))).toBe(true);
+    it('should have Vitest configuration', () => {
+      expect(fs.existsSync(path.join(__dirname, '..', 'vitest.config.ts'))).toBe(true);
     });
 
     it('should have test setup file', () => {

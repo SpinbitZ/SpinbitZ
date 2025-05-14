@@ -22,7 +22,7 @@ graph TD
     subgraph "Build Tools"
         Webpack[Webpack]
         Babel[Babel]
-        Jest[Jest]
+        Vitest[Vitest]
     end
     
     subgraph "Styling"
@@ -52,7 +52,7 @@ mindmap
       MVI
       Streams
     Testing
-      Jest
+      Vitest
       Testing Library
       Stream Testing
     Build
@@ -77,7 +77,7 @@ graph LR
     
     subgraph "Development Dependencies"
         E[TypeScript] --> A
-        F[Jest] --> A
+        F[Vitest] --> A
         G[Webpack] --> A
     end
     
@@ -96,7 +96,7 @@ graph LR
 | Cycle.js | ^1.0.0 | FRAOP Framework |
 | Callbags | ^3.2.0 | Stream Management |
 | TypeScript | ^5.0.0 | Type Safety |
-| Jest | ^29.0.0 | Testing Framework |
+| Vitest | ^0.34.0 | Testing Framework |
 | Webpack | ^5.0.0 | Build Tool |
 | Tailwind CSS | ^3.0.0 | Styling Framework |
 
@@ -145,7 +145,7 @@ graph TD
     A --> C[Integration Tests]
     A --> D[Stream Tests]
     
-    B --> E[Jest]
+    B --> E[Vitest]
     C --> E
     D --> E
     
@@ -188,7 +188,7 @@ graph TD
 
 2. **Development Workflow**
    - Follow TTDD methodology
-   - Implement proper testing
+   - Implement proper testing with Vitest
    - Use Git flow for version control
 
 3. **Performance Considerations**

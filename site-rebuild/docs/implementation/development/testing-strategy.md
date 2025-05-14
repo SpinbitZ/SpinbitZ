@@ -32,35 +32,31 @@ graph TD
 
 ## Testing Framework
 
-### 1. Jest Configuration
-```javascript
-module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
-  moduleNameMapper: {
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    '\\.(gif|ttf|eot|svg)$': '<rootDir>/__mocks__/fileMock.js'
-  },
-  collectCoverageFrom: [
-    'src/**/*.{ts,tsx}',
-    '!src/**/*.d.ts',
-    '!src/index.tsx',
-    '!src/serviceWorker.ts'
-  ],
-  coverageThreshold: {
-    global: {
-      branches: 90,
-      functions: 90,
+### 1. Vitest Configuration
+```typescript
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  test: {
+    environment: 'node',
+    include: ['**/*.{test,spec}.{js,ts}'],
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'json', 'html'],
       lines: 90,
+      functions: 90,
+      branches: 90,
       statements: 90
     }
   }
-};
+});
 ```
 
 ### 2. Testing Utilities
 ```typescript
+import { describe, it, expect } from 'vitest';
+import { render, fireEvent } from '@testing-library/react';
+
 // Test utilities for components
 export const renderWithProviders = (
   ui: React.ReactElement,
@@ -93,7 +89,7 @@ export const createTestStream = <T>(initialValue: T) => {
 export const createTestState = <T>(initialState: T) => {
   return {
     ...initialState,
-    dispatch: jest.fn()
+    dispatch: vi.fn()
   };
 };
 ```
@@ -125,6 +121,9 @@ export const createTestState = <T>(initialState: T) => {
 
 ### 1. Component Test Example
 ```typescript
+import { describe, it, expect } from 'vitest';
+import { render, fireEvent } from '@testing-library/react';
+
 describe('Button Component', () => {
   it('renders correctly', () => {
     const { getByText } = render(<Button>Click me</Button>);
@@ -132,7 +131,7 @@ describe('Button Component', () => {
   });
 
   it('handles click events', () => {
-    const handleClick = jest.fn();
+    const handleClick = vi.fn();
     const { getByText } = render(
       <Button onClick={handleClick}>Click me</Button>
     );
@@ -144,6 +143,8 @@ describe('Button Component', () => {
 
 ### 2. Stream Test Example
 ```typescript
+import { describe, it, expect } from 'vitest';
+
 describe('User Stream', () => {
   it('emits user data', () => {
     const userStream = createTestStream<User>({
@@ -165,6 +166,8 @@ describe('User Stream', () => {
 
 ### 3. State Test Example
 ```typescript
+import { describe, it, expect } from 'vitest';
+
 describe('User State', () => {
   it('updates user data', () => {
     const initialState = {
@@ -213,7 +216,7 @@ describe('User State', () => {
 
 ## Testing Tools
 
-### 1. Jest
+### 1. Vitest
 - Test runner
 - Assertions
 - Mocks

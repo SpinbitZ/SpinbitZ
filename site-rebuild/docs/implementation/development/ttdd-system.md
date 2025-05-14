@@ -43,16 +43,12 @@ graph TD
 ```markdown
 # TASK-XXX: Task Title
 
-## GitHub Issue
-- Issue Number: #YYY
-- Status: [open/closed]
-- Labels: [list of labels]
-
 ## Status
 - [ ] Not Started
 - [ ] In Progress
 - [ ] In Review
 - [ ] Completed
+- [ ] Abandoned
 
 ## Priority
 - [ ] High
@@ -186,7 +182,6 @@ feat(scope): Implement feature
 
 ### 1. Task Definition
 - Create detailed task documentation
-- Create corresponding GitHub Issue
 - Define acceptance criteria
 - Specify test cases
 - Document implementation requirements
@@ -196,21 +191,21 @@ feat(scope): Implement feature
 - Write test cases based on acceptance criteria
 - Implement test infrastructure
 - Verify test coverage
-- Update GitHub Issue with test progress
+- Update task status
 - No commits at this stage
 
 ### 3. Implementation
 - Develop features based on test requirements
 - Follow FRAOP architecture guidelines
 - Implement all required functionality
-- Update GitHub Issue with implementation progress
+- Update task status
 - No commits at this stage
 
 ### 4. Testing
 - Run all test cases
 - Verify acceptance criteria
 - Document test results
-- Update GitHub Issue with test results
+- Update task status
 - No commits at this stage
 
 ### 5. Review
@@ -218,7 +213,7 @@ feat(scope): Implement feature
 - Verify implementation matches requirements
 - Check test coverage
 - Document review findings
-- Update GitHub Issue with review status
+- Update task status
 - No commits at this stage
 
 ### 6. Task Completion
@@ -226,7 +221,7 @@ feat(scope): Implement feature
 - All acceptance criteria met
 - Code reviewed and approved
 - Documentation updated
-- GitHub Issue marked as ready for closure
+- Task marked as completed
 - **WAIT for explicit commit request from user**
 
 ### 7. Commit (ONLY after explicit user request)
@@ -234,12 +229,10 @@ feat(scope): Implement feature
 - Include task reference
 - Document changes
 - Push changes to repository
-- Close GitHub Issue with commit reference
 
 ## Quality Gates
 1. Task Definition
    - [ ] Complete task documentation
-   - [ ] GitHub Issue created
    - [ ] Defined acceptance criteria
    - [ ] Specified test cases
    - [ ] Documented implementation requirements
@@ -248,82 +241,28 @@ feat(scope): Implement feature
    - [ ] All test cases written
    - [ ] Test infrastructure in place
    - [ ] Test coverage verified
-   - [ ] GitHub Issue updated with test progress
+   - [ ] Test documentation complete
 
 3. Implementation
-   - [ ] Features implemented
-   - [ ] FRAOP guidelines followed
-   - [ ] All functionality complete
-   - [ ] GitHub Issue updated with implementation progress
+   - [ ] All features implemented
+   - [ ] FRAOP compliance verified
+   - [ ] Code quality standards met
+   - [ ] Implementation documented
 
 4. Testing
    - [ ] All tests passing
-   - [ ] Acceptance criteria met
+   - [ ] Coverage requirements met
+   - [ ] Performance benchmarks met
    - [ ] Test results documented
-   - [ ] GitHub Issue updated with test results
 
 5. Review
    - [ ] Code review completed
-   - [ ] Implementation verified
-   - [ ] Test coverage confirmed
+   - [ ] Documentation reviewed
+   - [ ] Standards compliance verified
    - [ ] Review findings documented
-   - [ ] GitHub Issue updated with review status
 
 6. Task Completion
    - [ ] All quality gates passed
    - [ ] Documentation updated
-   - [ ] GitHub Issue marked as ready for closure
-   - [ ] Ready for commit
-
-7. Commit (ONLY after explicit user request)
-   - [ ] User has requested commit
-   - [ ] Detailed commit message prepared
-   - [ ] Task reference included
    - [ ] Changes documented
-   - [ ] Changes pushed to repository
-   - [ ] GitHub Issue closed with commit reference
-
-## Implementation Guidelines
-
-### Task Documentation
-- Use standardized task template
-- Include GitHub Issue reference
-- Include all required sections
-- Document dependencies
-- Specify success criteria
-
-### Test Implementation
-- Write tests before implementation
-- Cover all acceptance criteria
-- Include edge cases
-- Document test scenarios
-- Update GitHub Issue with test progress
-
-### Development Process
-- Follow FRAOP architecture
-- Implement incrementally
-- Document changes
-- Maintain test coverage
-- Update GitHub Issue with progress
-
-### Review Process
-- Verify against standards
-- Check implementation
-- Review documentation
-- Confirm test coverage
-- Update GitHub Issue with review status
-
-### Commit Process
-- WAIT for explicit user request
-- Create detailed commit message
-- Include task reference
-- Document all changes
-- Push to repository
-- Close GitHub Issue with commit reference
-
-## Related Documents
-- Task Management
-- Testing Strategy
-- Documentation Standards
-- Implementation Plan
-- GitHub Issues Integration Guide 
+   - [ ] Ready for commit 

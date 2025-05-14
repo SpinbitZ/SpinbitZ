@@ -1,10 +1,10 @@
 # TASK-002: Set up tracking system
 
 ## Status
-- [x] Not Started
+- [ ] Not Started
 - [ ] In Progress
 - [ ] In Review
-- [ ] Completed
+- [x] Completed
 
 ## Priority
 - [x] High

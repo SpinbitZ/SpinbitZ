@@ -10,7 +10,7 @@ cd site-rebuild
 
 # Set up testing framework
 npm init -y
-npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+npm install --save-dev vitest @testing-library/react @testing-library/jest-dom
 
 # Initialize git repository
 git init
@@ -134,7 +134,7 @@ npm install --save-dev eslint prettier
    - ESLint configuration
    - TypeScript checking
    - Complexity metrics
-   - Code coverage
+   - Code coverage (90% minimum)
 
 2. **Performance Monitoring**
    - Lighthouse scores
@@ -244,7 +244,7 @@ npm install --save-dev eslint prettier
 
 ### 7.2 Mitigation Strategies
 1. **Technical Mitigation**
-   - Comprehensive testing
+   - Comprehensive testing with Vitest
    - Performance monitoring
    - Security audits
    - Regular reviews

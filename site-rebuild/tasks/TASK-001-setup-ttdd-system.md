@@ -1,10 +1,10 @@
 # TASK-001: Set up TTDD System
 
 ## Status
-- [x] Not Started
+- [ ] Not Started
 - [ ] In Progress
 - [ ] In Review
-- [ ] Completed
+- [x] Completed
 
 ## Priority
 - [x] High
