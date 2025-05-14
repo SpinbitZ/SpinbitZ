@@ -29,4 +29,11 @@ export const mockRoutes = [
   { path: '/szii-gallery', title: 'SZII Gallery' },
   { path: '/art', title: 'Art' },
   { path: '/downloads', title: 'Downloads' },
-]; 
+];
+
+export const mockData = {
+  title: 'Test Title',
+  description: 'Test Description',
+  name: 'Test Name',
+  error: 'Test Error'
+}; 
