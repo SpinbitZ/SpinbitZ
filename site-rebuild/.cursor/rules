@@ -262,4 +262,8 @@ recommend: [Recommended Action with Explanation]
 - All options MUST be actionable and specific
 - All options MUST be properly numbered
 - All options MUST be properly formatted
-- All options MUST include necessary context 
+- All options MUST include necessary context
+
+## Git Workflow Rule
+- All Git operations (commits, pushes, etc.) must be performed in the parent directory (`SpinbitZ`), not in `site-rebuild`.
+- Ensure you are in the correct directory before running Git commands. 
