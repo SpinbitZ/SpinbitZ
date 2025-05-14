@@ -95,6 +95,15 @@ const Downloads = () => (
   </PageTemplate>
 );
 
+const NotFound = () => (
+  <PageTemplate 
+    title="Not Found"
+    description="Page not found"
+  >
+    <p>The page you are looking for does not exist.</p>
+  </PageTemplate>
+);
+
 const App: React.FC = () => (
   <Router>
     <main>
@@ -109,7 +118,7 @@ const App: React.FC = () => (
         <Route path="/szii-gallery" element={<SZIIGallery />} />
         <Route path="/art" element={<Art />} />
         <Route path="/downloads" element={<Downloads />} />
-        {/* Add more routes as needed */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
   </Router>
