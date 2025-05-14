@@ -3,17 +3,31 @@
   "version": "1.0.0",
   "description": "SpinbitZ website rebuild with modern SSG and CMS",
   "scripts": {
+    "dev": "vite",
     "test": "vitest",
     "test:watch": "vitest watch",
     "test:coverage": "vitest run --coverage",
     "process-issue-status": "ts-node src/scripts/process-issue-status.ts",
     "process-project-card": "ts-node src/scripts/process-project-card.ts"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
     "@types/node": "^20.0.0",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^4.4.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.0",
+    "vite": "^6.3.5",
     "vitest": "^0.34.0"
+  },
+  "dependencies": {
+    "@cycle/react": "^2.10.0",
+    "@cycle/state": "^1.7.0",
+    "callbag-basics": "^4.0.0",
+    "callbag-common": "^0.1.8",
+    "callbag-jsx": "^0.1.13",
+    "xstream": "^11.14.0"
   }
 }
