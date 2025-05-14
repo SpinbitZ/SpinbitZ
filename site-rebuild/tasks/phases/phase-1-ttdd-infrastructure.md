@@ -32,17 +32,17 @@ This phase focuses on setting up the Test and Task Driven Development infrastruc
   - [ ] Create workflow diagrams
 
 ### 2. Testing Framework
-- [ ] TASK-005: Configure Jest
-  - [ ] Set up Jest configuration
-  - [ ] Configure test environment
-  - [ ] Set up test utilities
-  - [ ] Create test helpers
+- [x] TASK-005: Configure Vitest
+  - [x] Set up Vitest configuration
+  - [x] Configure test environment (jsdom)
+  - [x] Set up test utilities
+  - [x] Create test helpers
 
-- [ ] TASK-006: Set up testing utilities
-  - [ ] Create test utilities
-  - [ ] Set up test mocks
-  - [ ] Configure test data
-  - [ ] Document test utilities
+- [x] TASK-006: Set up testing utilities
+  - [x] Create test utilities (src/test/utils/test-utils.tsx)
+  - [x] Set up test mocks (src/test/mocks/mock-data.ts)
+  - [x] Configure test data with type safety
+  - [x] Document test utilities (docs/testing/test-utilities.md)
 
 - [ ] TASK-007: Create test templates
   - [ ] Create component test template
