@@ -16,6 +16,7 @@
     "@types/node": "^20.0.0",
     "@types/react": "^19.1.4",
     "@types/react-dom": "^19.1.5",
+    "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.4.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.0",
@@ -23,11 +24,14 @@
     "vitest": "^0.34.0"
   },
   "dependencies": {
+    "@cycle/html": "^3.4.0",
     "@cycle/react": "^2.10.0",
     "@cycle/state": "^1.7.0",
-    "callbag-basics": "^4.0.0",
-    "callbag-common": "^0.1.8",
-    "callbag-jsx": "^0.1.13",
+    "@types/react-helmet": "^6.1.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^7.6.0",
     "xstream": "^11.14.0"
   }
 }
