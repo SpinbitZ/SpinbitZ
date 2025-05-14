@@ -43,6 +43,25 @@ This document outlines the development workflow for the SpinbitZ project, follow
 - Address feedback
 - Update documentation
 
+### 5. Commit Process
+- **IMPORTANT**: Commits are ONLY made after:
+  1. Task is fully completed
+  2. All tests pass
+  3. Code review is approved
+  4. Documentation is updated
+  5. Explicit commit request is received
+- Never commit files without explicit request
+- Each commit should be tied to a specific task
+- Commit messages must follow the project format
+
+### 6. Communication Guidelines
+- **CRITICAL RULE**: When presenting options, ALWAYS:
+  1. Include a recommendation as one of the options
+  2. Mark the recommendation with "**Recommend:**" prefix
+  3. Explain the reasoning behind the recommendation
+  4. List all other viable options
+  5. Wait for explicit user choice
+
 ## Task Management
 
 ### Task States

@@ -16,6 +16,9 @@ graph TD
     F --> G{Review Pass?}
     G -->|Yes| H[Complete]
     G -->|No| C
+    H --> I{Explicit Commit Request?}
+    I -->|Yes| J[Commit Changes]
+    I -->|No| K[Wait for Request]
 ```
 
 ## 1. Task Creation
@@ -113,6 +116,17 @@ describe('Feature/Component', () => {
 - Link related tasks
 - Add reviewers
 - Address feedback
+
+### Commit Process
+- **CRITICAL RULE**: Commits are ONLY made after:
+  1. Task is fully completed
+  2. All tests pass
+  3. Code review is approved
+  4. Documentation is updated
+  5. Explicit commit request is received
+- Never commit files without explicit request
+- Each commit must be tied to a specific task
+- Commit messages must follow the project format
 
 ## Best Practices
 
