@@ -10,7 +10,7 @@ graph TD
     subgraph "Frontend Layer"
         React[React.js]
         Cycle[Cycle.js]
-        Callbags[Callbags]
+        xstream[xstream]
     end
     
     subgraph "State Management"
@@ -31,8 +31,8 @@ graph TD
     end
     
     React --> Cycle
-    Cycle --> Callbags
-    Callbags --> Streams
+    Cycle --> xstream
+    xstream --> Streams
     Streams --> MVI
     MVI --> FRAOP
 ```
@@ -45,7 +45,7 @@ mindmap
     Frontend
       React
       Cycle.js
-      Callbags
+      xstream
       Tailwind CSS
     Architecture
       FRAOP
@@ -71,7 +71,7 @@ mindmap
 graph LR
     subgraph "Core Dependencies"
         A[React] --> B[Cycle.js]
-        B --> C[Callbags]
+        B --> C[xstream]
         C --> D[FRAOP]
     end
     
@@ -94,7 +94,7 @@ graph LR
 | Node.js | >= 16.0.0 | Runtime Environment |
 | React | ^18.0.0 | UI Framework |
 | Cycle.js | ^1.0.0 | FRAOP Framework |
-| Callbags | ^3.2.0 | Stream Management |
+| xstream | ^11.14.0 | Stream Management |
 | TypeScript | ^5.0.0 | Type Safety |
 | Vitest | ^0.34.0 | Testing Framework |
 | Webpack | ^5.0.0 | Build Tool |

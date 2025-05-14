@@ -4,11 +4,10 @@
 
 ### FRAOP (Functional-Reactive Aspect-Oriented Programming)
 - All components MUST follow the FRAOP architecture
-- Use callbags for stream management
-- Implement proper stream cleanup
-- Follow unidirectional data flow
-- Maintain pure functions
-- Use proper stream operators
+- Use Cycle.js for reactive programming
+- Use xstream for stream management
+- Implement proper state management
+- Follow TTDD (Test and Task Driven Development)
 
 ### MVI (Model-View-Intent)
 - All components MUST implement MVI pattern
@@ -45,7 +44,7 @@
 - Use proper state selection
 
 ### Stream Management
-- Use callbags for streams
+- Use xstream for streams
 - Implement proper stream cleanup
 - Use proper stream operators
 - Handle stream errors

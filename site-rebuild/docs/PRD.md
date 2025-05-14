@@ -25,7 +25,7 @@ Rebuild the SpinbitZ website as a modern, high-performance static site with a ro
 - Strict adherence to TTDD (Test and Task Driven Development)
 - FRAOP architecture implementation
 - MVI pattern for all components
-- Callbags for stream management
+- xstream for stream management
 - Aspect-oriented programming for cross-cutting concerns
 
 ### 2. Architecture Requirements
@@ -33,7 +33,7 @@ Rebuild the SpinbitZ website as a modern, high-performance static site with a ro
 - FRAOP implementation with MVI pattern
 - Semantic HTML5 markup with ARIA attributes
 - Clear separation of concerns (presentation/logic/data)
-- Stream-based state management using callbags
+- Stream-based state management using xstream
 
 ### 3. Content Management
 - Markdown-based content structure
@@ -169,7 +169,7 @@ Rebuild the SpinbitZ website as a modern, high-performance static site with a ro
 ### Phase 2: Core Architecture (4 weeks)
 - Implement FRAOP architecture
 - Set up MVI pattern
-- Configure callbags
+- Configure xstream
 - Implement aspect system
 - Create base components
 

@@ -21,7 +21,7 @@ git commit -m "Initial commit: Project structure with TTDD setup"
 ### 1.2 Development Environment (Week 1)
 ```bash
 # Install core dependencies
-npm install @cycle/react @cycle/state callbag-basics callbag-operators callbag-jsx
+npm install @cycle/react @cycle/state xstream
 
 # Set up build system
 npm install --save-dev webpack webpack-cli babel-loader @babel/core @babel/preset-react
@@ -54,7 +54,7 @@ npm install --save-dev eslint prettier
 ### Phase 2: Core Architecture (Weeks 3-6)
 1. **FRAOP Implementation**
    - Set up MVI pattern
-   - Configure callbags
+   - Configure xstream
    - Implement aspect system
    - Create base components
 

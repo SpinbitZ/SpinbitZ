@@ -51,7 +51,7 @@ describe('App Skeleton', () => {
 ```
 
 ## Implementation Notes
-- Use Cycle.js and Callbags for the FRAOP pattern
+- Use Cycle.js and xstream for the FRAOP pattern
 - Use TypeScript for all new code
 - Keep the initial UI minimal—focus on structure, not design
 - Document the new folder structure and architecture

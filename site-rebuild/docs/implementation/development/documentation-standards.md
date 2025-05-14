@@ -280,7 +280,7 @@ dispatch({
 
 ### Folder Structure
 - `src/components/`: Reusable UI components
-- `src/streams/`: Stream management using Callbags
+- `src/streams/`: Stream management using xstream
 - `src/state/`: State management using FRAOP
 - `src/fraop/`: Core FRAOP architecture files
   - `index.ts`: Entry point for FRAOP initialization

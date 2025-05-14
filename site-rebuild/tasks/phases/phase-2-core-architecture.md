@@ -12,7 +12,7 @@ This phase focuses on implementing the core FRAOP architecture, state management
   - [ ] Set up view layer
   - [ ] Document MVI implementation
 
-- [ ] TASK-014: Configure callbags
+- [ ] TASK-014: Configure xstream
   - [ ] Set up stream operators
   - [ ] Implement stream composition
   - [ ] Configure stream cleanup

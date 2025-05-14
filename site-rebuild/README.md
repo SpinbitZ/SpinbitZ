@@ -17,7 +17,7 @@ site-rebuild/
 - **TTDD**: Test and Task Driven Development
 - **FRAOP**: Functional-Reactive Aspect-Oriented Programming
 - **MVI**: Model-View-Intent pattern
-- **Callbags**: Stream management
+- **xstream**: Stream management
 
 ## Rules System
 The project follows a strict set of development rules defined in `.cursor/rules`. These rules enforce:
@@ -26,7 +26,7 @@ The project follows a strict set of development rules defined in `.cursor/rules`
 - FRAOP architecture compliance
 - MVI pattern implementation
 - TTDD methodology
-- Stream management with callbags
+- Stream management with xstream
 
 ### Development Standards
 - Code structure and organization

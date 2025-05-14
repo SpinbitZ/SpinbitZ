@@ -218,7 +218,7 @@ Create a reusable button component following FRAOP principles.
 
 ### Acceptance Criteria
 - [ ] Implements MVI pattern
-- [ ] Uses callbags for streams
+- [ ] Uses xstream for streams
 - [ ] Includes aspect-oriented features
 - [ ] Passes all tests
 - [ ] Meets performance metrics

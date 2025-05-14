@@ -24,7 +24,7 @@ graph TD
 ### 2. Stream Management
 ```mermaid
 graph LR
-    subgraph "Callbag Streams"
+    subgraph "xstream Streams"
         S1[Source Stream]
         S2[Transform Stream]
         S3[Effect Stream]
@@ -115,7 +115,7 @@ const state$ = stream.combine(
 - Follow accessibility guidelines
 
 ### 2. Stream Management
-- Use callbags for streams
+- Use xstream for streams
 - Implement proper backpressure
 - Handle stream errors
 - Clean up streams properly

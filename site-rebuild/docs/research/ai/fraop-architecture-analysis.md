@@ -1,13 +1,13 @@
 # FRAOP Architecture Analysis for SpinbitZ Rebuild
 
 ## Overview
-This document analyzes the implementation of a Functional-Reactive Aspect-Oriented Programming (FRAOP) paradigm for the SpinbitZ website rebuild, utilizing Cycle.js with React integration, callbags, and MVI architecture.
+This document analyzes the implementation of a Functional-Reactive Aspect-Oriented Programming (FRAOP) paradigm for the SpinbitZ website rebuild, utilizing Cycle.js with React integration, xstream, and MVI architecture.
 
 ## 1. Core Architecture Components
 
 ### 1.1 FRAOP Paradigm
 - **Functional**: Pure functions and immutable data structures
-- **Reactive**: Stream-based data flow with callbags
+- **Reactive**: Stream-based data flow with xstream
 - **Aspect-Oriented**: Cross-cutting concerns separation
 - **Programming**: Test and Task Driven Development (TTDD)
 
@@ -18,9 +18,7 @@ This document analyzes the implementation of a Functional-Reactive Aspect-Orient
   "dependencies": {
     "@cycle/react": "latest",
     "@cycle/state": "latest",
-    "callbag-basics": "latest",
-    "callbag-operators": "latest",
-    "callbag-jsx": "latest",
+    "xstream": "latest",
     "react": "latest",
     "react-dom": "latest"
   }
@@ -57,17 +55,16 @@ function Component(sources) {
 }
 ```
 
-### 2.2 Callbags Integration
-```javascript
-// Callbag Stream Implementation
-import {pipe, map, filter} from 'callbag-basics';
-import {combine} from 'callbag-combine';
+### 2.2 xstream Integration
 
-const stream$ = pipe(
-  source$,
-  filter(x => x > 0),
-  map(x => x * 2)
-);
+// xstream Stream Implementation
+import xs from 'xstream';
+import { map, filter } from 'xstream/operators';
+import { combine } from 'xstream/extra/combine';
+
+const stream$ = xs.of(1, 2, 3, 4, 5)
+  .pipe(filter(x => x > 2))
+  .pipe(map(x => x * 2));
 ```
 
 ### 2.3 Aspect-Oriented Components
@@ -88,15 +85,13 @@ function withAspect(component, aspect) {
     const wrappedComponent = component(sources);
     return {
       ...wrappedComponent,
-      react: pipe(
-        wrappedComponent.react,
-        map(view => {
+      react: wrappedComponent.react
+        .map(view => {
           aspect.before('render', view);
           const result = view;
           aspect.after('render', result);
           return result;
         })
-      )
     };
   };
 }
@@ -234,19 +229,6 @@ describe('Button Component', () => {
 ### 5.2 Stream Testing
 ```javascript
 // Stream Testing Utilities
-import {testScheduler} from 'callbag-test-utils';
-
-testScheduler(({expectObservable}) => {
-  const stream$ = pipe(
-    source$,
-    map(x => x * 2)
-  );
-
-  expectObservable(stream$).toBe(
-    'a-b-c-|',
-    {a: 2, b: 4, c: 6}
-  );
-});
 ```
 
 ## 6. Performance Optimization
@@ -254,26 +236,24 @@ testScheduler(({expectObservable}) => {
 ### 6.1 Stream Optimization
 ```javascript
 // Stream Optimization Patterns
-const optimizedStream$ = pipe(
-  source$,
-  filter(x => x !== null),
-  distinctUntilChanged(),
-  map(x => x * 2)
-);
+const optimizedStream$ = xs.of(1, 2, 3, 4, 5)
+  .pipe(filter(x => x !== null))
+  .pipe(distinctUntilChanged())
+  .pipe(map(x => x * 2));
 ```
 
 ### 6.2 Component Optimization
 ```javascript
 // Component Optimization
 function optimizedComponent(sources) {
-  const view$ = pipe(
-    sources.state.stream,
-    map(state => memoizedView(state))
-  );
+  const view$ = xs.of(1, 2, 3, 4, 5)
+    .pipe(filter(x => x !== null))
+    .pipe(distinctUntilChanged())
+    .pipe(map(x => memoizedView(x)));
 
   return {
     react: view$,
-    state: sources.state.stream
+    state: xs.of(1, 2, 3, 4, 5)
   };
 }
 ```

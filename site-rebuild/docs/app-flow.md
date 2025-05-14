@@ -69,7 +69,7 @@ sequenceDiagram
 
 ```mermaid
 graph LR
-    subgraph "Callbag Streams"
+    subgraph "xstream Streams"
         S1[Source Stream]
         S2[Transform Stream]
         S3[Effect Stream]
@@ -154,7 +154,7 @@ graph LR
 ## Implementation Guidelines
 
 1. **Stream Management**
-   - Use callbags for all stream operations
+   - Use xstream for all stream operations
    - Implement proper stream cleanup
    - Handle stream errors appropriately
 
